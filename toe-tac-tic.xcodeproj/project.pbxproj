@@ -13,6 +13,9 @@
 		574BA9471A0042C5000B2625 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 574BA9461A0042C5000B2625 /* Images.xcassets */; };
 		574BA94A1A0042C5000B2625 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 574BA9481A0042C5000B2625 /* LaunchScreen.xib */; };
 		574BA9561A0042C5000B2625 /* toe_tac_ticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 574BA9551A0042C5000B2625 /* toe_tac_ticTests.swift */; };
+		574BA9621A004777000B2625 /* board.png in Resources */ = {isa = PBXBuildFile; fileRef = 574BA95F1A004777000B2625 /* board.png */; };
+		574BA9631A004777000B2625 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 574BA9601A004777000B2625 /* cross.png */; };
+		574BA9641A004777000B2625 /* nought.png in Resources */ = {isa = PBXBuildFile; fileRef = 574BA9611A004777000B2625 /* nought.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		574BA94F1A0042C5000B2625 /* toe-tac-ticTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "toe-tac-ticTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		574BA9541A0042C5000B2625 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		574BA9551A0042C5000B2625 /* toe_tac_ticTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toe_tac_ticTests.swift; sourceTree = "<group>"; };
+		574BA95F1A004777000B2625 /* board.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = board.png; sourceTree = "<group>"; };
+		574BA9601A004777000B2625 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
+		574BA9611A004777000B2625 /* nought.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nought.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +83,9 @@
 		574BA93C1A0042C5000B2625 /* toe-tac-tic */ = {
 			isa = PBXGroup;
 			children = (
+				574BA95F1A004777000B2625 /* board.png */,
+				574BA9601A004777000B2625 /* cross.png */,
+				574BA9611A004777000B2625 /* nought.png */,
 				574BA93F1A0042C5000B2625 /* AppDelegate.swift */,
 				574BA9411A0042C5000B2625 /* ViewController.swift */,
 				574BA9431A0042C5000B2625 /* Main.storyboard */,
@@ -161,6 +170,7 @@
 				TargetAttributes = {
 					574BA9391A0042C5000B2625 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = WT24N59ZSA;
 					};
 					574BA94E1A0042C5000B2625 = {
 						CreatedOnToolsVersion = 6.1;
@@ -192,6 +202,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				574BA9631A004777000B2625 /* cross.png in Resources */,
+				574BA9621A004777000B2625 /* board.png in Resources */,
+				574BA9641A004777000B2625 /* nought.png in Resources */,
 				574BA9451A0042C5000B2625 /* Main.storyboard in Resources */,
 				574BA94A1A0042C5000B2625 /* LaunchScreen.xib in Resources */,
 				574BA9471A0042C5000B2625 /* Images.xcassets in Resources */,
@@ -405,6 +418,7 @@
 				574BA95B1A0042C5000B2625 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		574BA95C1A0042C5000B2625 /* Build configuration list for PBXNativeTarget "toe-tac-ticTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +427,7 @@
 				574BA95E1A0042C5000B2625 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
