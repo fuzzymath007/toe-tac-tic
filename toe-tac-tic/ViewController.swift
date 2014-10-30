@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     
     let winningCombo = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
     
+    @IBOutlet var label: UILabel!
     
     @IBOutlet var button0: UIButton!
 
@@ -28,16 +29,16 @@ class ViewController: UIViewController {
         if(gameState[sender.tag]==0){
         
         var image = UIImage()
-        
+
         if (turn % 2 == 0){
         
-        image = UIImage(named: "cross.png")
+        image = UIImage(named: "cross.png")!
             
             gameState[sender.tag] = 2
             
         }else{
             
-        image = UIImage(named: "nought.png")
+        image = UIImage(named: "nought.png")!
             
             gameState[sender.tag] = 1
         
@@ -53,7 +54,9 @@ class ViewController: UIViewController {
             }
             
             if(winner != 0){
-                println("We have a winner")
+                UIView.animateWithDuration(1, animations:{
+                    self.label.center = CGPointMake(self.label.center.x + 400, self.label.center.y)})
+                
             }
         
         sender.setImage(image, forState: .Normal)
@@ -67,7 +70,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        // Do any additional setup after loading the view, typically from a nib
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        label.center = CGPointMake(label.center.x - 400, label.center.y)
     }
 
     override func didReceiveMemoryWarning() {
