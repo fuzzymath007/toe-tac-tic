@@ -151,6 +151,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0A-ip-RYt">
+                                <rect key="frame" x="258" y="401" width="86" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="RSn-Ie-Qnd"/>
+                                    <constraint firstAttribute="height" constant="30" id="c9I-hF-VWw"/>
+                                </constraints>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgainPresed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jfX-ER-6Cg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -159,6 +172,7 @@
                             <constraint firstItem="bdz-UW-Gyn" firstAttribute="top" secondItem="zhd-Sv-jpS" secondAttribute="top" constant="-6" id="Bfm-MQ-rtb"/>
                             <constraint firstItem="bdz-UW-Gyn" firstAttribute="leading" secondItem="zhd-Sv-jpS" secondAttribute="leading" constant="-230" id="BwU-jm-iXB"/>
                             <constraint firstAttribute="centerX" secondItem="bdz-UW-Gyn" secondAttribute="centerX" id="CdK-ZS-ugb"/>
+                            <constraint firstItem="C0A-ip-RYt" firstAttribute="leading" secondItem="bdz-UW-Gyn" secondAttribute="leading" constant="117" id="EoM-IF-9hl"/>
                             <constraint firstItem="bdz-UW-Gyn" firstAttribute="leading" secondItem="VIR-bs-okl" secondAttribute="leading" constant="-230" id="F2y-mB-FDW"/>
                             <constraint firstItem="bdz-UW-Gyn" firstAttribute="top" secondItem="uHs-xO-nWi" secondAttribute="top" constant="-6" id="FGb-Ew-n9D"/>
                             <constraint firstAttribute="centerY" secondItem="bdz-UW-Gyn" secondAttribute="centerY" id="NhI-Ty-ZZS"/>
@@ -170,6 +184,7 @@
                             <constraint firstItem="cOd-19-eCm" firstAttribute="top" secondItem="bdz-UW-Gyn" secondAttribute="top" constant="115" id="kEU-ea-jKj"/>
                             <constraint firstItem="bdz-UW-Gyn" firstAttribute="leading" secondItem="gLL-9U-sMj" secondAttribute="leading" constant="-46" id="l57-UA-9DU"/>
                             <constraint firstItem="bdz-UW-Gyn" firstAttribute="leading" secondItem="QgZ-QN-jDF" secondAttribute="leading" constant="-6" id="nBn-cj-Ebf"/>
+                            <constraint firstItem="C0A-ip-RYt" firstAttribute="top" secondItem="bdz-UW-Gyn" secondAttribute="top" constant="260" id="r8C-lG-dWp"/>
                             <constraint firstItem="bdz-UW-Gyn" firstAttribute="leading" secondItem="wCM-01-EmK" secondAttribute="leading" constant="-115" id="rdY-ot-wuB"/>
                             <constraint firstItem="bdz-UW-Gyn" firstAttribute="top" secondItem="qF1-XU-2VG" secondAttribute="top" constant="-115" id="rsY-Ty-UTE"/>
                             <constraint firstItem="bdz-UW-Gyn" firstAttribute="top" secondItem="VIR-bs-okl" secondAttribute="top" constant="-230" id="thk-my-NaM"/>
@@ -181,6 +196,7 @@
                     <connections>
                         <outlet property="button0" destination="uHs-xO-nWi" id="FmN-GP-ZFu"/>
                         <outlet property="label" destination="gLL-9U-sMj" id="KVS-Mn-Oab"/>
+                        <outlet property="playAgain" destination="C0A-ip-RYt" id="EjW-H9-uTH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

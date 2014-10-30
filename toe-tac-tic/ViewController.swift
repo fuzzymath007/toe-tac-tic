@@ -20,13 +20,27 @@ class ViewController: UIViewController {
     
     let winningCombo = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
     
+    @IBOutlet var playAgain: UIButton!
+    @IBAction func playAgainPresed(sender: AnyObject) {
+        
+        turn = 0
+        
+        winner = 0
+        
+        gameState = [0,0,0,0,0,0,0,0,0,0]
+        
+        self.label.center = CGPointMake(self.label.center.x - 400, self.label.center.y)
+        
+        self.playAgain.alpha = 1
+        
+    }
     @IBOutlet var label: UILabel!
     
     @IBOutlet var button0: UIButton!
 
     @IBAction func buttonPressed(sender: AnyObject) {
         
-        if(gameState[sender.tag]==0){
+        if(gameState[sender.tag]==0 && winner == 0){
         
         var image = UIImage()
 
@@ -54,8 +68,21 @@ class ViewController: UIViewController {
             }
             
             if(winner != 0){
+                
+                if(winner == 1){
+                    label.text = "The Xs WIN!!!"
+                }
+                
+                if (winner == 2){
+                    label.text = "The Os WIN!!"
+                }
+                
                 UIView.animateWithDuration(1, animations:{
-                    self.label.center = CGPointMake(self.label.center.x + 400, self.label.center.y)})
+                    self.label.center = CGPointMake(self.label.center.x + 400, self.label.center.y)
+                    
+                    self.playAgain.alpha = 1
+                
+                })
                 
             }
         
@@ -74,8 +101,10 @@ class ViewController: UIViewController {
         
     }
     
-    override func viewWillAppear(animated: Bool) {
-        label.center = CGPointMake(label.center.x - 400, label.center.y)
+    override func viewDidAppear(animated: Bool) {
+        self.label.center = CGPointMake(self.label.center.x - 400, self.label.center.y)
+        
+        playAgain.alpha = 0
     }
 
     override func didReceiveMemoryWarning() {
