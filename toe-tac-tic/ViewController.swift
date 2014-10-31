@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     // 0 is for empty, 1 is O and 2 is X
     
-    var gameState = [0,0,0,0,0,0,0,0,0,0]
+    var gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     
     let winningCombo = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
     
@@ -32,6 +32,16 @@ class ViewController: UIViewController {
         self.label.center = CGPointMake(self.label.center.x - 400, self.label.center.y)
         
         self.playAgain.alpha = 1
+        
+        var button : UIButton
+        
+        for var i = 0; i < 9; i++ {
+            
+            button = self.view.viewWithTag(i) as UIButton
+            
+            button.setImage(nil, forState: .Normal)
+            
+        }
         
     }
     @IBOutlet var label: UILabel!
@@ -67,21 +77,25 @@ class ViewController: UIViewController {
                 }
             }
             
-            if(winner != 0){
+            if (winner != 0) {
                 
-                if(winner == 1){
-                    label.text = "The Xs WIN!!!"
+                if (winner == 1) {
+                    
+                    label.text = "Noughts has won!"
+                    
+                } else {
+                    
+                    label.text = "Crosses has won!"
+                    
                 }
                 
-                if (winner == 2){
-                    label.text = "The Os WIN!!"
-                }
+                self.label.hidden = false
                 
-                UIView.animateWithDuration(1, animations:{
-                    self.label.center = CGPointMake(self.label.center.x + 400, self.label.center.y)
+                
+                UIView.animateWithDuration(0.4, animations: {
                     
                     self.playAgain.alpha = 1
-                
+                    
                 })
                 
             }
@@ -98,13 +112,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib
+
+        
+        
         
     }
     
     override func viewDidAppear(animated: Bool) {
-        self.label.center = CGPointMake(self.label.center.x - 400, self.label.center.y)
+        
+        self.label.hidden = true
         
         playAgain.alpha = 0
+        
     }
 
     override func didReceiveMemoryWarning() {
